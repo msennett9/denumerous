@@ -37,25 +37,23 @@
 <pre>
 <b>Overview</b>
 
-   Denumerous is an application used to reduce the number of test cases needed to
-be performed using an All Pairs algorithm.  The majority of errors are not caused by
-a single input parameter value rather by the interaction between two or more.  All
-Pairs is designed to reduce the number of total tests by only testing the interaction
-between two parameter values one time.  Testing every combination will test each
-interaction multiple times drastically increasing the number of tests needed to be
-performerd.
+   Denumerous is a test combination generation tool.  It can be used to
+generate a list of test cases given a set of parameters and possible values for
+each parameter.  Several generation algorithms are supported.  Typically, the goal
+is to reduce the total possible number of test cases by generating, for instance,
+combinations that exercise all two-way interactions.  This is based on evidence
+that many defects are related to the interactions of a small number of variables.
 </pre>
 <hr>
 
 <pre>
 <b>How to Use</b>
 
-   The easiest way to input the test parameters and their values is to first write 
-them in a Microsoft Excel spreadsheet and copy them to the text area.  You could 
-also copy them in from a text editor or type them straight into the text area.  The 
-input format is to keep the parameter names left aligned and indent their value's 
-names on subsequent lines immediately following the parameter's line using either 
-a tab or spaces.
+   The easiest way to input the test parameters and their values is to first enter 
+them in a spreadsheet and copy them to the text area.  You could also copy them 
+from a text editor or type them straight into the text area.  The input format is simple:
+parameter names start in the first position; values for that parameter follow 
+on subsequent lines indented with either a tab or spaces.
 </pre>
 
 <table width="700" cellspacing="8">
@@ -76,28 +74,11 @@ Now click the "Generate Combinations" button.
 <img src="DenumerousSample.jpg" alt="Denumerous Sample">
 
 <pre>
-   On the next screen you will see a table displaying all of the test combinations that satisfy
-the all-pairs algorithm.  From this screen you can export your results to an XML and/or CSV file.
-Any cell containing the string "empty" means that any of that parameters values can be put in the
-test combination and all pairs will still be satisfied.
+   On the next screen you will see a table displaying the generated combinations.  A value
+of "empty" indicates a don't care value.  From this screen you can export your results to an 
+XML and/or CSV file using the Export button.
 </pre>
 <img src="ResultsSample.jpg" alt="Results Sample"><br><br>
-
-
-<hr>
-
-<pre>
-<b>All Pairs Algorithm Description</b>
-
-   The All Pairs algorithm designed for Denumerous works using several steps.  First all the possible 
-pairs of parameter values are determined.  Then the list of these pairs is shuffled to provide a 
-random order into building the test combinations.  The algorithm then checks each pair to see if it 
-can fit into an existing partial test combination.  If it can, it is added to the partial test combination 
-and if it can't a new partial test combination is created and the pair is added to it.  Once a partial 
-test combination is complete it is turned into a complete test combination.  After all the pairs have 
-been added to test combinations any incomplete combinations are filled with "empty" values 
-indicating any of the parameter values can be put in and all pairs will still be satisfied.
-</pre>
 
 </body>
 </html>
