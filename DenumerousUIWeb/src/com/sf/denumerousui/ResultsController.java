@@ -18,6 +18,7 @@
 package com.sf.denumerousui;
 
 import java.io.File;
+import java.io.InputStream;
 import java.io.StringWriter;
 import java.io.Writer;
 
@@ -70,13 +71,14 @@ public class ResultsController
 		}
 		catch(RuntimeException re)
 		{
+			System.err.print("Error generating combinations: " + re.getMessage());
 			error = true;
 			errorMsg = re.getMessage();
 			return combinations;
 		}
 	}
 	
-	public void convertResultsToHtml(TestCombinationList combinations, Writer writer, String filePath)
+	public void convertResultsToHtml(TestCombinationList combinations, Writer writer, InputStream xslStream)
 	{
 		try
 		{
@@ -87,14 +89,14 @@ public class ResultsController
 			
 			Result result = new StreamResult(writer);
 			
-			File xslFile = new File(filePath); //FileNotFoundException
-			Source xslSource = new StreamSource(xslFile);
+			Source xslSource = new StreamSource(xslStream);
 			Transformer xslFormer = TransformerFactory.newInstance().newTransformer(xslSource); //TransformerConfigurationException
 			
 			xslFormer.transform(xmlSource, result); //TransformerException
 		}
 		catch(Exception ex)
 		{
+			System.err.print("Error converting to HTML: " + ex.getMessage());
 			error = true;
 			errorMsg = ex.getMessage();
 		}
@@ -117,6 +119,7 @@ public class ResultsController
 		}
 		catch(Exception ex)
 		{
+			System.err.print("Error converting to XML: " + ex.getMessage());
 			error = true;
 			errorMsg = ex.getMessage();
 			return result;
@@ -140,6 +143,7 @@ public class ResultsController
 		}
 		catch(Exception ex)
 		{
+			System.err.print("Error converting to CSV: " + ex.getMessage());
 			error = true;
 			errorMsg = ex.getMessage();
 			return result;

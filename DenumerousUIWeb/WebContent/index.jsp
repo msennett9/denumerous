@@ -34,7 +34,7 @@
 </pre></center>
 
 <%
-	if(session.getAttribute("error") == "true") {
+	if ("true".equals(session.getAttribute("error"))) {
 %>
 	<div id="error"><b>Error:</b> <%=session.getAttribute("errorMsg") %>.</div>
 	<% session.setAttribute("error", "false"); %>

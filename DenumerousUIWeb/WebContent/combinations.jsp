@@ -26,6 +26,7 @@
 %>
 
 <%@page import="java.io.StringWriter"%>
+<%@page import="java.io.InputStream"%>
 <%@page import="com.sf.denumerous.*"%>
 <%@page import="com.sf.denumerousui.*" %>
 <html>
@@ -50,10 +51,9 @@
 	{
 		StringWriter sWriter = new StringWriter();
 		ServletContext context = getServletContext();
-		String xslSource = context.getRealPath("/");
-		xslSource = xslSource + "\\combinationsToHtml.xsl";
+		InputStream xslStream = context.getResourceAsStream("/combinationsToHtml.xsl");
 	
-		r.convertResultsToHtml(combinations, sWriter, xslSource);
+		r.convertResultsToHtml(combinations, sWriter, xslStream);
 		
 		if(r.error) 
 		{
@@ -63,13 +63,18 @@
 		}
 		else
 		{
+			out.println(sWriter.toString());
+
+			System.out.println("Generating XML and CSV");
+			
 			String xmlCombinations = r.convertResultsToXML(combinations);
 			session.setAttribute("combinationsXML", xmlCombinations);
 			
 			String csvCombinations = r.convertResultsToCSV(combinations);
 			session.setAttribute("combinationsCSV", csvCombinations);
 			
-			out.println(sWriter.toString());
+			System.out.println("Generating XML and CSV - finished");
+
 		}
 	}
 	else

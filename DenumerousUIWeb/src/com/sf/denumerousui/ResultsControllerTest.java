@@ -19,6 +19,9 @@ package com.sf.denumerousui;
 
 import static org.junit.Assert.*;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.io.StringWriter;
 
 import org.junit.Before;
@@ -49,7 +52,7 @@ public class ResultsControllerTest {
 	}
 	
 	@Test
-	public void testToWeb()
+	public void testToWeb() throws FileNotFoundException
 	{
 		String file = "A\n\ta1\n\ta2\n\ta3\nB\n\tb1\n\tb2\nC\n\tc1\n\tc2\n\tc3";
 		String generator = "allpairs1";
@@ -60,7 +63,9 @@ public class ResultsControllerTest {
 		
 		TestCombinationList combinations = r.generateCombinations();
 		
-		r.convertResultsToHtml(combinations, writer, "WebContent/combinationsToHtml.xsl");
+		InputStream xslStream = new FileInputStream("WebContent/combinationsToHtml.xsl");
+		
+		r.convertResultsToHtml(combinations, writer, xslStream);
 		
 		String xmlString = writer.toString();
 		
