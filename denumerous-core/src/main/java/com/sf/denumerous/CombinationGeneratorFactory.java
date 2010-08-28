@@ -45,7 +45,7 @@ public class CombinationGeneratorFactory
 		ITestCombinationGenerator generator;
 		try 
 		{
-			Class theClass  = Class.forName(generatorClassName);
+			Class<?> theClass  = Class.forName(generatorClassName);
 			generator = (ITestCombinationGenerator) theClass.newInstance();
 			generator.properties(generatorProps);
 		} 

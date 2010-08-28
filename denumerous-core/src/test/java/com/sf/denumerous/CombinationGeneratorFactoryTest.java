@@ -33,7 +33,7 @@ public class CombinationGeneratorFactoryTest
 	{
 		try
 		{
-			ITestCombinationGenerator gen = factory.generatorForName("foo");
+			factory.generatorForName("foo");
 			fail("Should have thrown an exception.");
 		}
 		catch (RuntimeException re)
@@ -48,7 +48,7 @@ public class CombinationGeneratorFactoryTest
 	{
 		try
 		{
-			ITestCombinationGenerator gen = factory.generatorForName(null);
+			factory.generatorForName(null);
 			fail("Null name should throw exception.");
 		}
 		catch (RuntimeException e) { }
