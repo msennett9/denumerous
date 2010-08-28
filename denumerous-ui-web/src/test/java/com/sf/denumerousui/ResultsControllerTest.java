@@ -63,7 +63,7 @@ public class ResultsControllerTest {
 		
 		TestCombinationList combinations = r.generateCombinations();
 		
-		InputStream xslStream = new FileInputStream("WebContent/combinationsToHtml.xsl");
+		InputStream xslStream = this.getClass().getClassLoader().getResourceAsStream("combinationsToHtml.xsl");
 		
 		r.convertResultsToHtml(combinations, writer, xslStream);
 		
