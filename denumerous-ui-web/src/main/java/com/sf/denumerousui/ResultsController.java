@@ -17,7 +17,6 @@
 
 package com.sf.denumerousui;
 
-import java.io.File;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.io.Writer;
