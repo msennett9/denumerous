@@ -173,13 +173,15 @@ public class TestCombinationOutputCreatorTest
 			
 		FileReader reader = new FileReader("Output\\4x6.xml");
 		
-		BufferedReader buffReader = new BufferedReader(reader);
+		try (BufferedReader buffReader = new BufferedReader(reader)) {
+
+			String xmlString = buffReader.readLine();
+
+			assertTrue(xmlString.contains("?xml"));
+			assertTrue(xmlString.contains("<TestCombinations>"));
+			assertTrue(xmlString.contains("</TestCombinations>"));
+		}
 		
-		String xmlString = buffReader.readLine();
-		
-		assertTrue(xmlString.contains("?xml"));
-		assertTrue(xmlString.contains("<TestCombinations>"));
-		assertTrue(xmlString.contains("</TestCombinations>"));
 	 }
 	 
 	 @Test

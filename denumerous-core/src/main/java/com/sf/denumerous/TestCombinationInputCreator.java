@@ -30,10 +30,20 @@ public class TestCombinationInputCreator
 {	
 	public Parameter[] fromFile(String fileName)
 	{
-		try
+		FileReader fr;
+		
+		try {
+			fr = new FileReader(fileName);
+		}
+		catch(FileNotFoundException exp)
 		{
-			FileReader fr = new FileReader(fileName);
-			BufferedReader br = new BufferedReader(fr);
+			throw new RuntimeException(exp);
+		}
+		
+		
+		try (BufferedReader br = new BufferedReader(fr))
+		{
+			fr = new FileReader(fileName);
 			
 			ArrayList<String> input = new ArrayList<String>();
 			
@@ -48,10 +58,6 @@ public class TestCombinationInputCreator
 			Parameter[] result = makeTestParameters(inputArr);
 			
 			return result;
-		}
-		catch(FileNotFoundException exp)
-		{
-			throw new RuntimeException(exp);
 		}
 		catch(IOException exp)
 		{

@@ -154,8 +154,6 @@ public class AllPairsCombinationGenerator2 implements ITestCombinationGenerator
 	{
 		ArrayList<ValuePair> pairs = new ArrayList<ValuePair>();
 			
-		int allPairsCounter = 0;
-		
 		for(int i=0; i<parameters.length-1; i++)
 		{ //Parameter array
 			ParameterValue[] paramValues1 = parameters[i].getValues();
@@ -177,9 +175,6 @@ public class AllPairsCombinationGenerator2 implements ITestCombinationGenerator
 						
 						//---Add ValuePair to arrayList---
 						pairs.add(pair);
-						
-						//---Increment counter---
-						allPairsCounter++;
 					}
 				}
 					
