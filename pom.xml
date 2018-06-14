@@ -10,7 +10,8 @@
   <modules>
     <module>denumerous-core</module>
     <module>denumerous-ui-web</module>
-  </modules>
+  <module>denumerous-lambda</module>
+</modules>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
