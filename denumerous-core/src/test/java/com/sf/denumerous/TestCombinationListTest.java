@@ -22,10 +22,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sf.denumerous.TestCombination;
-import com.sf.denumerous.TestCombinationList;
-import com.sf.denumerous.TestCombinationValue;
-
 public class TestCombinationListTest
 {
 	private TestCombination testCombo1;

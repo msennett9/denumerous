@@ -3,8 +3,6 @@ package com.sf.denumerous;
 import java.io.InputStream;
 import java.util.Properties;
 
-import com.sf.denumerous.ITestCombinationGenerator;
-
 public class CombinationGeneratorFactory 
 {
 	private static Properties generatorProps;
@@ -46,7 +44,7 @@ public class CombinationGeneratorFactory
 		try 
 		{
 			Class<?> theClass  = Class.forName(generatorClassName);
-			generator = (ITestCombinationGenerator) theClass.newInstance();
+			generator = (ITestCombinationGenerator) theClass.getDeclaredConstructor().newInstance();
 			generator.properties(generatorProps);
 		} 
 		catch (Exception e) 

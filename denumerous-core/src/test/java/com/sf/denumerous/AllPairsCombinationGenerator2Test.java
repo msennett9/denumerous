@@ -25,14 +25,6 @@ import java.util.Iterator;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sf.denumerous.AllPairsCombinationGenerator2;
-import com.sf.denumerous.Parameter;
-import com.sf.denumerous.ParameterValue;
-import com.sf.denumerous.TestCombination;
-import com.sf.denumerous.TestCombinationList;
-import com.sf.denumerous.TestCombinationValue;
-import com.sf.denumerous.ValuePair;
-
 public class AllPairsCombinationGenerator2Test
 {
 	private AllPairsCombinationGenerator2 APCG2;

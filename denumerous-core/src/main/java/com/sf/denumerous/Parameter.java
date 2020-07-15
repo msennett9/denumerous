@@ -17,8 +17,6 @@
 
 package com.sf.denumerous;
 
-import com.sf.denumerous.ParameterValue;
-
 public class Parameter
 {
 	private String name;

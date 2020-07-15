@@ -36,15 +36,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.sf.denumerous.AllPairsCombinationGenerator2;
-import com.sf.denumerous.Parameter;
-import com.sf.denumerous.ParameterValue;
-import com.sf.denumerous.TestCombination;
-import com.sf.denumerous.TestCombinationList;
-import com.sf.denumerous.TestCombinationOutputCreator;
-import com.sf.denumerous.TestCombinationValue;
-import com.sf.denumerous.ValuePair;
-
 public class TestCombinationOutputCreatorTest
 {	
 	private AllPairsCombinationGenerator2 APCG2;
@@ -167,11 +158,11 @@ public class TestCombinationOutputCreatorTest
 			
 		TestCombinationOutputCreator outputCreator = new TestCombinationOutputCreator(tcl);
 			
-		FileWriter writer = new FileWriter("Output\\4x6.xml", false);
+		FileWriter writer = new FileWriter("Output/4x6.xml", false);
 			
 		outputCreator.toXMLDocument(writer, false);
 			
-		FileReader reader = new FileReader("Output\\4x6.xml");
+		FileReader reader = new FileReader("Output/4x6.xml");
 		
 		try (BufferedReader buffReader = new BufferedReader(reader)) {
 

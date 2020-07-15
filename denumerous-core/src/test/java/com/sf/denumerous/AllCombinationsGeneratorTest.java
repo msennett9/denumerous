@@ -22,13 +22,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sf.denumerous.AllCombinationsGenerator;
-import com.sf.denumerous.Parameter;
-import com.sf.denumerous.ParameterValue;
-import com.sf.denumerous.TestCombination;
-import com.sf.denumerous.TestCombinationList;
-import com.sf.denumerous.TestCombinationValue;
-
 public class AllCombinationsGeneratorTest {
 
 	private Parameter param1;

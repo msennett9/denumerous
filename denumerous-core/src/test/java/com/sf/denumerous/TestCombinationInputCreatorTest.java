@@ -29,13 +29,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.w3c.dom.Document;
 
-import com.sf.denumerous.AllPairsCombinationGenerator2;
-import com.sf.denumerous.Parameter;
-import com.sf.denumerous.ParameterValue;
-import com.sf.denumerous.TestCombinationInputCreator;
-import com.sf.denumerous.TestCombinationList;
-import com.sf.denumerous.TestCombinationOutputCreator;
-
 public class TestCombinationInputCreatorTest
 {
 	@Before
@@ -46,7 +39,7 @@ public class TestCombinationInputCreatorTest
 	@Test
 	public void testFromFile() throws XPathExpressionException
 	{
-		String fileName = "Input\\3x3.txt";
+		String fileName = "Input/3x3.txt";
 		
 		TestCombinationInputCreator inputCreator = new TestCombinationInputCreator();
 		

@@ -5,9 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sf.denumerous.CombinationGeneratorFactory;
-import com.sf.denumerous.ITestCombinationGenerator;
-
 public class CombinationGeneratorFactoryTest 
 {
 	private CombinationGeneratorFactory factory;

@@ -23,9 +23,6 @@ import java.util.HashSet;
 
 import org.junit.Test;
 
-import com.sf.denumerous.TestCombinationValue;
-import com.sf.denumerous.ValuePair;
-
 public class ValuePairTest
 {
 
