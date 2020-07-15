@@ -20,13 +20,6 @@ package com.sf.denumerous;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import com.sf.denumerous.CombinationGeneratorFactory;
-import com.sf.denumerous.ITestCombinationGenerator;
-import com.sf.denumerous.Parameter;
-import com.sf.denumerous.TestCombinationInputCreator;
-import com.sf.denumerous.TestCombinationList;
-import com.sf.denumerous.TestCombinationOutputCreator;
-
 public class Denumerous
 {
 	public static void main(String[] args) throws IOException

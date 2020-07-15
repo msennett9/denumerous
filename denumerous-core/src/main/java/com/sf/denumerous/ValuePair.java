@@ -17,7 +17,6 @@
 
 package com.sf.denumerous;
 
-import com.sf.denumerous.TestCombinationValue;
 import com.sf.denumerous.ValuePair;
 
 public class ValuePair

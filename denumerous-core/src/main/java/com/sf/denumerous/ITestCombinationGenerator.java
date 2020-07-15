@@ -19,9 +19,6 @@ package com.sf.denumerous;
 
 import java.util.Properties;
 
-import com.sf.denumerous.Parameter;
-import com.sf.denumerous.TestCombinationList;
-
 public interface ITestCombinationGenerator {
 
 	public abstract TestCombinationList generateCombinations(Parameter[] parameters);

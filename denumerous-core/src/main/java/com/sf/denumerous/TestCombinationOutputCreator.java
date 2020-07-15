@@ -34,10 +34,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.ProcessingInstruction;
 
-import com.sf.denumerous.TestCombination;
-import com.sf.denumerous.TestCombinationList;
-import com.sf.denumerous.TestCombinationValue;
-
 public class TestCombinationOutputCreator
 {
 	private TestCombinationList combinations;

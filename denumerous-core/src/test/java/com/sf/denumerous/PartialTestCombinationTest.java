@@ -22,12 +22,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sf.denumerous.Parameter;
-import com.sf.denumerous.ParameterValue;
-import com.sf.denumerous.PartialTestCombination;
-import com.sf.denumerous.TestCombinationValue;
-import com.sf.denumerous.ValuePair;
-
 public class PartialTestCombinationTest
 {
 	private PartialTestCombination x;

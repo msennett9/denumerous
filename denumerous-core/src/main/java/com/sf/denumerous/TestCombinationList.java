@@ -20,8 +20,6 @@ package com.sf.denumerous;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import com.sf.denumerous.TestCombination;
-
 public class TestCombinationList extends HashMap<String, TestCombination>
 {	
 	private static final long serialVersionUID = 1L;

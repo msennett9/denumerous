@@ -23,9 +23,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.sf.denumerous.Parameter;
-import com.sf.denumerous.ParameterValue;
-
 public class TestCombinationInputCreator
 {	
 	public Parameter[] fromFile(String fileName)

@@ -21,15 +21,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Properties;
 
-import com.sf.denumerous.ITestCombinationGenerator;
-import com.sf.denumerous.Parameter;
-import com.sf.denumerous.ParameterValue;
-import com.sf.denumerous.PartialTestCombination;
-import com.sf.denumerous.TestCombination;
-import com.sf.denumerous.TestCombinationList;
-import com.sf.denumerous.TestCombinationValue;
-import com.sf.denumerous.ValuePair;
-
 public class AllPairsCombinationGenerator2 implements ITestCombinationGenerator
 {
 	private boolean[] pairsUsed;

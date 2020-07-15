@@ -19,13 +19,6 @@ package com.sf.denumerous;
 
 import java.util.Properties;
 
-import com.sf.denumerous.ITestCombinationGenerator;
-import com.sf.denumerous.Parameter;
-import com.sf.denumerous.ParameterValue;
-import com.sf.denumerous.TestCombination;
-import com.sf.denumerous.TestCombinationList;
-import com.sf.denumerous.TestCombinationValue;
-
 public class AllCombinationsGenerator implements ITestCombinationGenerator 
 {
 	private TestCombinationList allCombinations;
