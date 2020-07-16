@@ -1,16 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.sf.denumerous</groupId>
+  <version>1.0-SNAPSHOT</version>
   <artifactId>denumerous-core</artifactId>
   <packaging>jar</packaging>
   <name>denumerous-core</name>
 
-  <parent>
-    <groupId>com.sf.denumerous</groupId>
-    <artifactId>denumerous</artifactId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
-  
   <dependencies>
     <dependency>
 	    <groupId>org.graalvm.sdk</groupId>
@@ -18,6 +15,12 @@
 	    <version>20.1.0</version>
 	    <scope>provided</scope>
 	</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   
   <build>
