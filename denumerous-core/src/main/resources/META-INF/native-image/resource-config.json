@@ -1,0 +1,4 @@
+{
+  "resources":[{"pattern":"\\Qgenerator.properties\\E"}],
+  "bundles":[]
+}

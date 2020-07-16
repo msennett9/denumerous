@@ -14,7 +14,7 @@ public class CombinationGeneratorFactory
 			return;
 		}
 		
-		InputStream in = this.getClass().getClassLoader().getResourceAsStream(configFileName);
+		InputStream in = ClassLoader.getSystemClassLoader().getResourceAsStream(configFileName);
 		if (in == null) 
 		{
 			throw new RuntimeException("Properties file not found.");
